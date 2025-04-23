@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>두뇌 활력! 숫자 열차 게임</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5557020069900323"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div id="startScreen">
+            <h1>두뇌 활력! 숫자 열차</h1>
+            <p class="description">숫자 열차를 연결하며 즐겁게 뇌를 훈련하세요!<br>90초 동안 집중하여 10을 만드는 도전!</p>
+            <button id="startBtn">게임 시작</button>
+        </div>
+
+        <div id="gameContent" style="display: none;">
+            <p class="subtitle">숫자 열차로 10 만들기 (두뇌 훈련)</p>
+
+            <div class="instructions">
+                <p><strong>게임 방법:</strong> 영역을 드래그하여 합이 <strong>정확히 10</strong>이 되는 그룹을 만드세요.</p>
+                <p>선택한 열차 숫자들의 합이 10이 되면 해당 열차가 사라집니다.</p>
+                <p>제한 시간은 <strong>90초</strong> 입니다. 집중력과 계산 능력을 키워보세요!</p>
+                <p>한 번에 많은 열차를 제거할수록 더 높은 점수를 획득합니다!</p>
+            </div>
+
+            <div class="score-panel">
+                <div>점수: <span id="score">0</span></div>
+                <div>시간: <span id="timer">90</span>초</div>
+                <div>현재 합: <span id="currentSum">0</span></div>
+            </div>
+
+            <div class="status-message" id="status"></div>
+
+            <div class="button-container">
+                <button id="newGameBtn">새 게임</button>
+            </div>
+
+            <div class="grid-container">
+                <div class="grid" id="trainGrid">
+                    </div>
+                <div class="game-over" id="gameOver">
+                    게임 종료!<br>
+                    최종 점수: <span id="finalScore">0</span><br><br>
+                    <div id="brainAgeMessage" style="font-size: 16px; margin-bottom: 15px;"></div>
+                    <button id="restartBtn" class="restart-btn">다시 시작</button>
+                </div>
+            </div>
+
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+          document.addEventListener('DOMContentLoaded', function() {
+              FastClick.attach(document.body);
+          }, false);
+      }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
